@@ -1,3 +1,4 @@
+using Docplanner.Application.Doctors.Availability.Mappers;
 using Docplanner.Application.Doctors.Availability.Queries;
 using Docplanner.Contracts.Queries.Doctors.Availability;
 using Docplanner.Tests.Shared.Factories.ExternalClients;
@@ -22,9 +23,7 @@ public class GetDoctorWeeklyAvailabilityHandlerShould
         // Arrange
         var request = new GetDoctorWeeklyAvailability(new DateTime(2024, 9, 30)); // Monday
 
-        var availabilityResponse = GetAvailabilityResponsesFactory.Create(
-            monday: DaysFactory.Create()
-        );
+        var availabilityResponse = GetAvailabilityResponsesFactory.Create(monday: DaysFactory.Create());
 
         _availabilityClientMock.SetupGetAvailabilitiesAsync(request.WeekStartDate, availabilityResponse);
 
@@ -33,5 +32,6 @@ public class GetDoctorWeeklyAvailabilityHandlerShould
 
         // Assert
         result.Should().NotBeNull();
+        result.Should().BeEquivalentTo(availabilityResponse.MapToDto(DateOnly.FromDateTime(request.WeekStartDate)));
     }
 }

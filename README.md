@@ -27,8 +27,8 @@ dotnet run --project Docplanner.Api
 3. Click on an endpoint to expand it and see the details.
 4. Use the "Try it out" button to test the endpoints directly from the Swagger UI.
 
-### Example Endpoints
+### Endpoints
 - **GET /api/v1/doctors/availability/weekly**: Retrieve doctor availability.
-- **POST /api/v1/doctors/availability/takeSlot**: Book a doctor slot.
+- **POST /api/v1/doctors/availability/takeSlot**: Book a doctor slot (based on response from /api/v1/doctors/availability/weekly).
 
 
