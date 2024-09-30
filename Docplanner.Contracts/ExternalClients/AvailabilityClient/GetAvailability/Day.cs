@@ -4,6 +4,6 @@ namespace Docplanner.Contracts.ExternalClients.AvailabilityClient.GetAvailabilit
 
 public class Day
 {
-    public WorkPeriod? WorkPeriod { get; set; }
-    public TimeSlot[]? BusySlots { get; set; }
+    public WorkPeriod? WorkPeriod { get; init; } 
+    public TimeSlot[]? BusySlots { get; init; }
 }

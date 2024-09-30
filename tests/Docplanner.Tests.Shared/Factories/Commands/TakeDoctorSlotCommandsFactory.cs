@@ -38,7 +38,7 @@ public static class TakeDoctorSlotCommandsFactory
             Start = start ?? DateTime.Now,
             End = end ?? DateTime.Now.AddHours(1),
             Comment = comment,
-            Patient = null,
+            Patient = null!,
             FacilityId = facilityId ?? Guid.NewGuid()
         };
     }

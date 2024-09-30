@@ -22,7 +22,7 @@ dotnet run --project Docplanner.Api
 ## Using the API
 
 ### Swagger UI
-1. Open your web browser and navigate to `https://localhost:5235/swagger`.
+1. Open your web browser and navigate to `http://localhost:5235/swagger`.
 2. You will see the Swagger UI with all available endpoints.
 3. Click on an endpoint to expand it and see the details.
 4. Use the "Try it out" button to test the endpoints directly from the Swagger UI.

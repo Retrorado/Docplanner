@@ -4,5 +4,5 @@ namespace Docplanner.Contracts.Queries.Doctors.Availability;
 
 public class Day
 {
-    public TimeSlot[] Slots { get; set; }
+    public TimeSlot[] Slots { get; init; } = [];
 }
